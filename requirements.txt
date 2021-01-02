@@ -58,25 +58,3 @@ wrapt==1.12.1
 WTForms==2.3.3
 zope.event==4.5.0
 zope.interface==5.2.0
-=======
-
-# Flask Static Digest
-Flask-Static-Digest==0.2.1
-
-# Auth
-Flask-Login==0.5.0
-Flask-Bcrypt==0.7.1
-
-# Caching
-Flask-Caching>=1.7.2
-
-# Debug toolbar
-Flask-DebugToolbar==0.11.0
-
-# Environment variable parsing
-environs==9.3.0
-
-# VSCode Linting
-pylint_flask_sqlalchemy
-pylint_flask
->>>>>>> f19552ff9c7057c9cad89dd39adaf13cead7fdc9
