@@ -1,0 +1,20 @@
+schema {
+  query: Query
+}
+
+type Query {
+  users: UsersResponse!
+}
+
+type UsersResponse {
+  success: Boolean!
+  errors: [String]
+  users: [User]
+}
+
+type User {
+  id: ID!
+  username: String!
+  is_admin: Boolean!
+  active: Boolean
+}
