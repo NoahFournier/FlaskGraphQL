@@ -38,3 +38,7 @@ Flask-DebugToolbar==0.11.0
 
 # Environment variable parsing
 environs==9.3.0
+
+# VSCode Linting
+pylint_flask_sqlalchemy
+pylint_flask
