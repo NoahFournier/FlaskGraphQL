@@ -58,6 +58,7 @@ def register_shellcontext(app):
     app.shell_context_processor(shell_context)
 
 def register_graphql(app):
+    """Register GraphQL API & Playground route"""
 
     query = ObjectType("Query")
 
