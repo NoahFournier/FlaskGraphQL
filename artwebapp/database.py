@@ -42,7 +42,7 @@ class PkModel(Model):
     @classmethod
     def get_by_id(cls, record_id):
         """Get record by ID"""
-        if isinstance(record_id, (int, float)):
+        if isinstance(record_id, (int, float, str)):
             return cls.query.get(int(record_id))
         return None
 

@@ -14,3 +14,19 @@ def resolve_users(obj, info):
             "errors": [error]
         }
     return payload
+
+def resolve_user(obj, info, id):
+    """Resolver function for 'user' Query"""
+    try:
+        user = User.get_by_id(id)
+        print(user)
+        payload = {
+            "success": True,
+            "users": [user]
+        }
+    except Exception as error:
+        payload = {
+            "success": False,
+            "errors": [error]
+        }
+    return payload

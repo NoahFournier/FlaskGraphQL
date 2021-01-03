@@ -4,6 +4,7 @@ schema {
 
 type Query {
   users: UsersResponse!
+  user(id: ID!): UsersResponse!
 }
 
 type UsersResponse {

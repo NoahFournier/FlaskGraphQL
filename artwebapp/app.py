@@ -12,7 +12,7 @@ from artwebapp.extensions import (
     cache
 )
 from artwebapp import commands, entities
-from artwebapp.resolvers.user import resolve_users
+from artwebapp.resolvers.user import resolve_users, resolve_user
 
 def create_app(config_object="artwebapp.settings"):
     """Create application factory
@@ -63,6 +63,7 @@ def register_graphql(app):
     query = ObjectType("Query")
 
     query.set_field("users", resolve_users)
+    query.set_field("user", resolve_user)
 
     type_defs = gql(load_schema_from_path("schema.graphql"))
     schema = make_executable_schema(
