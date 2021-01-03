@@ -4,7 +4,7 @@ schema {
 
 type Query {
   users: UsersResponse!
-  user(id: ID!): UsersResponse!
+  user(user_id: ID!): UsersResponse!
 }
 
 type UsersResponse {

@@ -15,10 +15,10 @@ def resolve_users(obj, info):
         }
     return payload
 
-def resolve_user(obj, info, id):
+def resolve_user(obj, info, user_id):
     """Resolver function for 'user' Query"""
     try:
-        user = User.get_by_id(id)
+        user = User.get_by_id(user_id)
         print(user)
         payload = {
             "success": True,
