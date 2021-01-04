@@ -18,7 +18,7 @@ def resolve_users(obj, info):
 def resolve_user(obj, info, user_id):
     """Resolver function for 'user' Query"""
     try:
-        user = User.get_by_id(user_id)
+        user = User.get_by_id(user_id).to_dict()
         print(user)
         payload = {
             "success": True,

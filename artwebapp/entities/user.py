@@ -25,7 +25,6 @@ class User(UserMixin, PkModel):
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.LargeBinary(128), nullable=True)
     created_at = db.Column(db.DateTime, nullable=False, default=dt.datetime.utcnow)
-    active = db.Column(db.Boolean(), default=False)
     is_admin = db.Column(db.Boolean(), default=False)
 
     def __init__(self, username, password=None, **kwargs):
@@ -45,10 +44,10 @@ class User(UserMixin, PkModel):
         return bcrypt.check_password_hash(self.password, value)
     
     def to_dict(self):
+        """Return dictionary view"""
         return {
             "id": self.id,
             "username": self.username,
-            "active": self.active,
             "is_admin": self.is_admin
         }
     

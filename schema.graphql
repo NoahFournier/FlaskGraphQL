@@ -17,5 +17,4 @@ type User {
   id: ID!
   username: String!
   is_admin: Boolean!
-  active: Boolean
 }
