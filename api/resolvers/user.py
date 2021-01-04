@@ -1,4 +1,4 @@
-from artwebapp.entities.user import User
+from api.entities.user import User
 
 def resolve_users(obj, info):
     """Resolver function for 'users' Query"""

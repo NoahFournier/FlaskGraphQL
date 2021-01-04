@@ -1,7 +1,7 @@
 import datetime as dt
 from flask_login import UserMixin
-from artwebapp.database import PkModel, db, reference_col
-from artwebapp.extensions import bcrypt
+from api.database import PkModel, db, reference_col
+from api.extensions import bcrypt
 
 class Role(PkModel):
 

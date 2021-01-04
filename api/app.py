@@ -3,7 +3,7 @@ import sys
 from ariadne import snake_case_fallback_resolvers, make_executable_schema, load_schema_from_path, gql, graphql_sync, ObjectType
 from ariadne.constants import PLAYGROUND_HTML
 from flask import Flask, request, jsonify
-from artwebapp.extensions import (
+from api.extensions import (
     db,
     migrate,
     debug_toolbar,
@@ -11,10 +11,10 @@ from artwebapp.extensions import (
     bcrypt,
     cache
 )
-from artwebapp import commands, entities
-from artwebapp.resolvers.user import resolve_users, resolve_user
+from api import commands, entities
+from api.resolvers.user import resolve_users, resolve_user
 
-def create_app(config_object="artwebapp.settings"):
+def create_app(config_object="api.settings"):
     """Create application factory
 
     :param config_object: The configuration object to use
